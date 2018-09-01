@@ -1,4 +1,4 @@
-#! env /usr/bin/bash
+#!/usr/bin/bash
 # memo2html -- Samsung memo to html conversion script
 # saves typing a series of commands
 source $HOME/.config/memo2html.cfg
