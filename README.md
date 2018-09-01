@@ -1,5 +1,5 @@
-# samsung-memo2web
-Converts a Samsung Galaxy Memo into a simple web page.
+# phone-memo2web
+Converts .memo files from an Android phone (maybe just Samsung?) into a simple web page.
 
 #install
 Modify the paths in memo2html.cfg, then 
