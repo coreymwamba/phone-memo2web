@@ -3,7 +3,7 @@ Converts .memo files from an Android phone (maybe just Samsung?) into a simple w
 
 ## requirements
 + unzip
-+ libxlst
++ libxslt
 + bash
 
 ## install
