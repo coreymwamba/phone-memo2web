@@ -1,15 +1,14 @@
 #! env /usr/bin/bash
 # memo2html -- Samsung memo to html conversion script
 # saves typing a series of commands
-PREFIX=~/.local/share/memo2html/
-DOCSDIR=~/Documents/memos
+source $HOME/.config/memo2html.cfg
 m=$(basename $1)
 MEMO=${m%%.*}
-mkdir -p $DOCSDIR/$MEMO
-MF=$DOCSDIR/$MEMO
+MF=$MEMOS/$MEMO
+mkdir -p $MF
 unzip -qq -o $1 -d $MF
 cd $MF
-xsltproc -o index.html $PREFIX/memo2html.xsl memo_content.xml
+xsltproc -o index.html $PREFIX/share/memo2html.xsl memo_content.xml
 sed -i -e 's|src=\"/|src=\"|g' index.html
 exit 0
 
