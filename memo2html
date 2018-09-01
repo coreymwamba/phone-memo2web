@@ -2,6 +2,7 @@
 # memo2html -- Samsung memo to html conversion script
 # saves typing a series of commands
 source $HOME/.config/memo2html.cfg
+if [[ $1 =~ \.memo$ ]]; then
 m=$(basename $1)
 MEMO=${m%%.*}
 MF=$MEMOS/$MEMO
@@ -11,4 +12,8 @@ cd $MF
 xsltproc -o index.html $PREFIX/share/memo2html.xsl memo_content.xml
 sed -i -e 's|src=\"/|src=\"|g' index.html
 exit 0
-
+else
+echo "memo2html: Samsung .memo file to HTML conversion"
+echo "Use: memo2html memo_file"
+exit 0
+fi
